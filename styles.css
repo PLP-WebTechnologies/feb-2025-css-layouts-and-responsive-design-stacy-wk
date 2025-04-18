@@ -1,0 +1,102 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* General page styles */
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background-color: #f4f4f4;
+  }
+  
+  /* Header styles */
+  header {
+    background: #040303;
+    color: white;
+    padding: 1rem;
+  }
+  
+  /* Navigation styles */
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+  }
+  
+  /* Main content */
+  main {
+    padding: 2rem;
+  }
+  
+  .content {
+    font-size: 1.5rem;
+  }
+  
+  /* Grid layout */
+  .grid-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  /* Individual boxes */
+  .box {
+    background: #8e2b90;
+    color: white;
+    padding: 2rem;
+    border-radius: 30px;
+    text-align: center;
+  }
+  
+  /* Mobile styles */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .grid-section {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .box {
+      font-size: 1.2rem;
+    }
+  }
+  
+  /* Smaller screens (phones) */
+  @media (max-width: 480px) {
+    .grid-section {
+      grid-template-columns: 1fr;
+    }
+  
+    .box {
+      font-size: 1rem;
+    }
+  
+    nav ul {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  
+  /* Large screens (desktops) */
+  @media (min-width: 1024px) {
+    .grid-section {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  
+    .box {
+      font-size: 1.5rem;
+    }
+  }
+  
